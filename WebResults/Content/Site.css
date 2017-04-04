@@ -1,0 +1,100 @@
+﻿@media screen {
+    body {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    /* Set padding to keep content from hitting the edges */
+    .body-content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Set width on the form input elements since they're 100% wide by default */
+    input,
+    select,
+    textarea {
+        max-width: 280px;
+    }
+
+    .vcenter {
+        display: inline-block;
+        vertical-align: middle;
+        float: none;
+    }
+
+    .bg-odd {
+        background-color: antiquewhite;
+    }
+
+    .bg-event {
+        background-color: lightgray;
+    }
+
+    .courses-row {
+        padding-top: 2px;
+        border-top: 2px;
+        margin-bottom: 10px;
+        page-break-inside: avoid;
+    }
+}
+
+@media print {
+    h2 {
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+
+    h3 {
+        font-size: unset;
+    }
+    .title {
+        font-size: 26px;
+        font-weight: 200;
+    }
+
+    .courses-row {
+        padding-top: unset;
+        border-top: unset;
+        margin-bottom: unset;
+        page-break-before: avoid;
+    }
+
+    .result-row {
+        page-break-inside: avoid;
+        page-break-after: avoid;
+    }
+
+    .page-header {
+        margin: 0px !important;
+    }
+
+    .category-row {
+        page-break-after: always;
+    }
+
+    .course-detail{
+        page-break-inside: avoid;
+    }
+
+    .course-detail h4 {
+        font-size: 16px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    
+    .bg-odd {
+        background-color: antiquewhite !important;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .bg-event {
+        background-color: lightgray !important;
+        -webkit-print-color-adjust: exact;
+    }
+}
+
+.page-header {
+    margin: 0px;
+}

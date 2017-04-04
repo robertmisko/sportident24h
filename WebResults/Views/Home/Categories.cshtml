@@ -1,0 +1,72 @@
+﻿<div class="col-md-12 col-xs-12 category-row" ng-repeat="result in categories">
+    <div class="row">
+        <div class="col-md-12 col-xs-12 page-header">
+            <h2><span class="label label-default">{{result.Category}}</span></h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1 col-xs-2"><h4><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></h4></div>
+        <div class="col-md-1 col-xs-2"><h4><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></h4></div>
+        <div class="col-md-3 col-xs-4"><h4>Team / Csapat</h4></div>
+        <div class="col-md-2 col-xs-3">
+            <h4 class="hidden-print">Last Finish / Befutás</h4>
+            <h5 class="visible-print">Last Finish / Befutás</h5>
+        </div>
+        <div class="col-md-5 col-xs-1"><h4>#</h4></div>
+    </div>
+
+    <hr style="margin-bottom: 5px; margin-top: 2px;" />
+
+    <div class="row result-row" ng-repeat-start="r in result.Results">
+        <div class="col-md-1 col-xs-2">
+            <div class="alert alert-info vcenter hidden-print" style="margin-bottom: 1px;padding: 5px;">
+                <h3 style="margin: 2px;"><strong>{{r.NumCourses}}</strong></h3>
+            </div>
+            <div class="visible-print vcenter">
+                <h4><strong>{{r.NumCourses}}</strong></h4>
+            </div>
+        </div>
+        <div class="col-md-1 col-xs-2">
+            <div class="alert alert-danger vcenter hidden-print" style="margin-bottom: 1px;padding: 5px;">
+                <h3 style="margin: 2px;"><strong>{{r.NumInvalid}}</strong></h3>
+            </div>
+            <div class="vcenter visible-print">
+                <h4><strong>{{r.NumInvalid}}</strong></h4>
+            </div>
+        </div>
+        <div class="col-md-3 col-xs-4">
+            <h4 class="hidden-print">{{r.TeamName}}</h4>
+            <h5 class="visible-print">{{r.TeamName}}</h5>
+        </div>
+        <div class="col-md-2 col-xs-3">
+            <h4>{{r.RecentFinishTime | date:"MM/dd HH:mm"}}</h4>
+        </div>
+        <div class="col-md-5 col-xs-1"><h4><span class="label label-default">{{$index+1}}</span></h4></div>
+    </div>
+    <!--<div class="row courses-row" ng-repeat-end>
+        <div class="col-md-8 col-xs-12">
+            <div class="alert alert-success" style="margin-bottom: 1px;padding: 5px;" role="alert">
+                <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
+                <ng-repeat ng-repeat="c in r.Courses track by $index">
+                    {{c.Name}} |
+                </ng-repeat>
+            </div>
+        </div>
+    </div>-->
+
+    <div class="row courses-row" ng-repeat-end>
+        <div class="col-md-8 col-xs-12">
+                <div class="row" ng-repeat="c in r.Courses track by $index"  ng-class-odd="'bg-odd'" ng-class-even="'bg-even'">
+                    <div class="col-md-1 col-xs-1">{{$index+1}}</div>
+                    <div class="col-md-1 col-xs-2">{{c.Name}}</div>
+                    <div class="col-md-2 col-xs-2">{{c.Time}}</div>
+                    <div class="col-md-3 col-xs-3">{{c.Runner}}</div>
+                    <div class="col-md-2 col-xs-3">{{c.Finish | date:"MM/dd HH:mm:ss"}}</div>
+                    <div class="col-md-1 col-xs-1"><span ng-if="!c.Valid" class="glyphicon glyphicon-remove-circle"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

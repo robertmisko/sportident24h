@@ -1,0 +1,28 @@
+﻿<div class="col-md-12 col-xs-12">
+    <div class="row hidden-print" style="margin-bottom: 0;">
+        <div class="col-md-1 col-xs-1"><h4>#</h4></div>
+        <div class="col-md-1 col-xs-2"><h4><span class="glyphicon glyphicon-time" aria-hidden="true"></span></h4></div>
+        <div class="col-md-5 col-xs-8"><h4>Runner</h4></div>
+        <div class="col-md-5 col-xs-1"></div>
+    </div>
+    <div class="row course-detail" ng-repeat="result in courses">
+        <div class="col-md-12 col-xs-12 page-header" style="margin-top: 2px;">
+            <h2><span class="label label-default">{{result.Course}}</span></h2>
+        </div>
+        <div class="col-md-12 col-xs-12" ng-repeat="r in result.Results" ng-class-odd="'bg-odd'" ng-class-even="'bg-even'">
+                <div class="row">
+                <div class="col-md-1 col-xs-1">
+                    <h4>{{$index+1}}</h4>
+                </div>
+                <div class="col-md-1 col-xs-2"><h4>{{r.Time}}</h4></div>
+                <div class="col-md-5 col-xs-8">
+                    <h4>
+                        {{r.Runner }} | {{r.TeamName}}
+                        <span ng-if="!r.IsValid" class="glyphicon glyphicon-remove-circle"></span>
+                    </h4>
+                </div>
+                <div class="col-md-5 col-xs-1"></div>
+            </div>
+        </div>
+    </div>
+</div>

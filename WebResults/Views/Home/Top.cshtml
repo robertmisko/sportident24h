@@ -1,0 +1,70 @@
+﻿<div class="col-md-12 col-xs-12">
+    <div class="row" >
+        <div class="" ng-repeat="result in row1" ng-class-even="'col-md-5 col-md-offset-1'" ng-class-odd="'col-md-5'">
+            <div class="row">
+                <div class="col-md-12 col-xs-12 page-header" style="margin-top: 5px;">
+                    <h2><span class="label label-default">{{result.Category}}</span></h2>
+                </div>
+                <div class="col-md-12 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-1 col-xs-1"><strong>#</strong></div>
+                        <div class="col-md-1 col-xs-2"><h5><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></h5></div>
+                        <div class="col-md-1 col-xs-2"><h5><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></h5></div>
+                        <div class="col-md-6 col-xs-4"><strong>Team</strong></div>
+                        <div class="col-md-3 col-xs-3"><strong>Last Finish</strong></div>
+                    </div>
+                    <hr style="margin-bottom: 5px; margin-top: 2px;" />
+                    <div class="row" ng-repeat="r in result.Results" ng-class-odd="'bg-odd'" ng-class-even="'bg-even'" style="padding-top: 3px; padding-bottom: 3px;">
+                        <div class="col-md-1 col-xs-1"><h5><span class="label label-default">{{$index+1}}</span></h5></div>
+                        <div class="col-md-1 col-xs-2">
+                            <div class="alert alert-info vcenter" style="margin-bottom: 1px;padding: 5px;">
+                                <h4 style="margin: 2px;"><strong>{{r.NumCourses}}</strong></h4>
+                            </div>
+                        </div>
+                        <div class="col-md-1 col-xs-2">
+                            <div class="alert alert-danger vcenter" style="margin-bottom: 1px;padding: 5px;">
+                                <h4 style="margin: 2px;"><strong>{{r.NumInvalid}}</strong></h4>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xs-4"><h5>{{r.TeamName}}</h5></div>
+                        <div class="col-md-3 col-xs-3"><h5>{{r.RecentFinishTime | date:"MM/dd HH:mm"}}</h5></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div ng-repeat="result in row2"  ng-class-even="'col-md-5 col-md-offset-1'" ng-class-odd="'col-md-5'">
+            <div class="row">
+                <div class="col-md-12 col-xs-12 page-header" style="margin-top: 5px;">
+                    <h2><span class="label label-default">{{result.Category}}</span></h2>
+                </div>
+                <div class="col-md-12 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-1 col-xs-1"><strong>#</strong></div>
+                        <div class="col-md-1 col-xs-2"><h5><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></h5></div>
+                        <div class="col-md-1 col-xs-2"><h5><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></h5></div>
+                        <div class="col-md-6 col-xs-4"><strong>Team</strong></div>
+                        <div class="col-md-3 col-xs-3"><strong>Last Finish</strong></div>
+                    </div>
+                    <hr style="margin-bottom: 5px; margin-top: 2px;" />
+                    <div class="row" ng-repeat="r in result.Results" ng-class-odd="'bg-odd'" ng-class-even="'bg-even'" style="padding-top: 3px; padding-bottom: 3px;">
+                        <div class="col-md-1 col-xs-1"><h5><span class="label label-default">{{$index+1}}</span></h5></div>
+                        <div class="col-md-1 col-xs-2">
+                            <div class="alert alert-info vcenter" style="margin-bottom: 1px;padding: 5px;">
+                                <h4 style="margin: 2px;"><strong>{{r.NumCourses}}</strong></h4>
+                            </div>
+                        </div>
+                        <div class="col-md-1 col-xs-2">
+                            <div class="alert alert-danger vcenter" style="margin-bottom: 1px;padding: 5px;">
+                                <h4 style="margin: 2px;"><strong>{{r.NumInvalid}}</strong></h4>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xs-4"><h5>{{r.TeamName}}</h5></div>
+                        <div class="col-md-3 col-xs-3"><h5>{{r.RecentFinishTime | date:"MM/dd HH:mm"}}</h5></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
