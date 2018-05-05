@@ -64,8 +64,12 @@
             container.Register<INewCardHandlerService, NewCardHandlerService>(Lifestyle.Scoped);
 
             container.Register<ICardDataProcessor, CardDataProcessor>(Lifestyle.Scoped);
-            //container.Register<IReader, SiReader>(Lifestyle.Transient);
-            container.Register<IReader, SiReader>(Lifestyle.Transient);
+
+            #if DEBUG
+                container.Register<IReader, MockReader>(Lifestyle.Transient);
+            #else
+                container.Register<IReader, SiReader>(Lifestyle.Transient);
+            #endif
 
             container.Register<Form1>();
 

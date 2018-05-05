@@ -26,7 +26,7 @@ namespace NewSpecialEvent.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\;Initial Catalog=special_event;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=special_event;Integrated Security=True")]
         public string special_eventConnectionString {
             get {
                 return ((string)(this["special_eventConnectionString"]));

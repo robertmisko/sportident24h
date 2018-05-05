@@ -130,7 +130,7 @@ namespace NewSpecialEvent
             // teamsToolStripMenuItem
             // 
             this.teamsToolStripMenuItem.Name = "teamsToolStripMenuItem";
-            this.teamsToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.teamsToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.teamsToolStripMenuItem.Text = global::NewSpecialEvent.Resources.Default.Teams;
             this.teamsToolStripMenuItem.Click += new System.EventHandler(this.TeamsToolStripMenuItem_Click);
             // 
@@ -215,7 +215,7 @@ namespace NewSpecialEvent
             this.zeroTextBox.Name = "zeroTextBox";
             this.zeroTextBox.Size = new System.Drawing.Size(208, 29);
             this.zeroTextBox.TabIndex = 6;
-            this.zeroTextBox.Text = "2016/07/02 10:00:00";
+            this.zeroTextBox.Text = "2018/03/17 18:55:00";
             // 
             // zeroBtn
             // 

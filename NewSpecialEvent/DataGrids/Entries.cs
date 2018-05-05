@@ -53,7 +53,7 @@
             this.Validate();
             foreach (var runner in this.bindingList)
             {
-                if (runner.Team == null)
+                if (runner.Id != 0 && runner.Team == null)
                 {
                     this.context.Runners.Remove(runner);
                 }
