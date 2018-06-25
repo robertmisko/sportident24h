@@ -441,10 +441,10 @@
             else
             {
                 _closeDevices();
-                #if !DEBUG
+                //#if !DEBUG
                     //set input and output device
                     if (!_setInputDevice()) return;
-                #endif
+                //#endif
                 //open input and output device
                 try
                 {

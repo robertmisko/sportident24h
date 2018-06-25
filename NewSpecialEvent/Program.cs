@@ -44,11 +44,11 @@
             container.Register<ResultContext>(Lifestyle.Scoped);
             container.Register<IResultDataAccess, ResultDataAccess>(Lifestyle.Scoped);
 
-             #if DEBUG
-                container.Register<IDatabaseInitializer<ResultContext>, MockResultDataseeder>(Lifestyle.Singleton);
-             #else
+             //#if DEBUG
+             //   container.Register<IDatabaseInitializer<ResultContext>, MockResultDataseeder>(Lifestyle.Singleton);
+             //#else
                 container.Register<IDatabaseInitializer<ResultContext>, ResultDataseeder>(Lifestyle.Scoped);
-             #endif
+             //#endif
 
             // Register controldata, finishtime, etc providers
             container.Register<IControlDataProvider, ControlDataProvider>(Lifestyle.Singleton);
@@ -65,11 +65,11 @@
 
             container.Register<ICardDataProcessor, CardDataProcessor>(Lifestyle.Scoped);
 
-            #if DEBUG
-                container.Register<IReader, MockReader>(Lifestyle.Transient);
-            #else
+            //#if DEBUG
+            //    container.Register<IReader, MockReader>(Lifestyle.Transient);
+           // #else
                 container.Register<IReader, SiReader>(Lifestyle.Transient);
-            #endif
+            //#endif
 
             container.Register<Form1>();
 
